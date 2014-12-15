@@ -11,6 +11,15 @@ feature 'Play Game' do
     expect(page).to have_text('ARE YOUR READY TO PLAY BLASTOFF?')
   end
 
+  scenario 'allows a player to signup' do
+    visit 'play_game'
+
+    expect(page).to have_link('Signup')
+
+    click_link 'Signup'
+
+  end
+
   scenario 'allows a player to select a crew' do
     visit 'play_game'
 
