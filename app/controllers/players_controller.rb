@@ -27,6 +27,7 @@ class PlayersController < ApplicationController
   # POST /players
   # POST /players.json
   def create
+    # if User.id is not nill
     @player = Player.new(player_params)
     @player.user_id = User.find(session[:id]).id
     respond_to do |format|
@@ -38,6 +39,9 @@ class PlayersController < ApplicationController
         format.json { render json: @player.errors, status: :unprocessable_entity }
       end
     end
+    # else
+    # if User.id is nil error user must login before playing game
+    # end
   end
 
   # PATCH/PUT /players/1

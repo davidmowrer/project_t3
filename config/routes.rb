@@ -15,13 +15,23 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#login'
   post 'login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
-
   get 'play_game' => 'play_game#play_game'
   get 'player_login' => 'players#login'
-  get 'select_crew' => 'play_game#select_crew'
-  get 'jetsons' => 'play_game#jetsons'
-  get 'space_ghost' => 'play_game#space_ghost'
   get 'count_down' => 'play_game#count_down'
+  get 'blastoff' => 'play_game#blastoff'
+  get 'orbit_earth' => 'play_game#orbit_earth'
+  get 'moon' => 'play_game#moon'
+  get 'earth_chicken' => 'play_game#earth_chicken'
+  get 'rubber_chicken' => 'play_game#rubber_chicken'
+  get 'crashed_earth' => 'play_game#crashed_earth'
+  get 'update_status' => 'play_game#update_status'
+  get 'crashed_liftoff' => 'play_game#crashed_liftoff'
+  get 'loser' => 'play_game#loser'
+
+
+
+
+  get 'player_levels' => 'player#show'
 
 
 end
