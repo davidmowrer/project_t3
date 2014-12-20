@@ -4,23 +4,18 @@ class PlayersController < ApplicationController
   def login
     @player = Player.new
   end
-  # GET /players
-  # GET /players.json
+
   def index
     @players = Player.all
   end
 
-  # GET /players/1
-  # GET /players/1.json
   def show
   end
 
-  # GET /players/new
   def new
     @player = Player.new
   end
 
-  # GET /players/1/edit
   def edit
   end
 

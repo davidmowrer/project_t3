@@ -20,13 +20,4 @@ feature 'Play Game' do
 
   end
 
-  scenario 'allows a player to select a crew' do
-    visit 'play_game'
-
-    expect(page).to have_link('Select_A_Crew')
-
-    click_link 'Select_A_Crew'
-
-  end
-
 end

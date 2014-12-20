@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   end
 
   def play_game
-    render play_game_path
+    render :play_game_path
   end
 
 end

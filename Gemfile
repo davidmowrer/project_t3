@@ -8,6 +8,7 @@ gem 'factory_girl_rails'
 group :test, :development do
   gem 'ruby_gntp'
   gem 'faker'
+  gem 'byebug'
 end
 
 group :test do
