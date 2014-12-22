@@ -1,5 +1,8 @@
 <% if current_user %>
   Signed in as <%= current_user.email %>
+  <% if current_player %>
+    (playing as <%= current_player.name %>)
+  <% end %>
   <%= link_to 'Logout', logout_path, method: :delete %>
 <% else %>
   <%= link_to 'Signup', new_user_path %>

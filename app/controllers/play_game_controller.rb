@@ -4,6 +4,15 @@ class PlayGameController < ApplicationController
     render :player_path
   end
 
+  def player_status
+    render :player_path
+  end
+
+  def player_update
+    render :edit_player_path
+  end
+
+
   def play_game
   end
 
@@ -23,6 +32,9 @@ class PlayGameController < ApplicationController
   end
 
   def loser
+  end
+
+  def abduction
   end
 
   def orbit_earth
@@ -48,9 +60,6 @@ class PlayGameController < ApplicationController
     elsif number == 2
       render :moon
     end
-  end
-
-  def update_status
   end
 
   def alien

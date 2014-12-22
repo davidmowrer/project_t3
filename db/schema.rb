@@ -15,11 +15,9 @@ ActiveRecord::Schema.define(version: 20141213224034) do
 
   create_table "players", force: true do |t|
     t.string   "name"
-    t.integer  "level_number"
-    t.string   "level_name"
-    t.integer  "crew_number"
-    t.string   "crew_name"
-    t.integer  "games_played"
+    t.integer  "rubber_chicken"
+    t.integer  "loser"
+    t.integer  "alien"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"

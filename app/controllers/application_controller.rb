@@ -4,11 +4,22 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_user
+  helper_method :current_player
 
   private
 
   def current_user
     @user  ||= User.find(session[:id]) if session[:id]
+  rescue ActiveRecord::RecordNotFound
+    session.delete(:id)
+    nil
+  end
+
+  def current_player
+    @player ||= current_user.players.find(session[:player_id])
+  rescue ActiveRecord::RecordNotFound
+    session.delete(:player_id)
+    nil
   end
 end
 

@@ -9,13 +9,14 @@ Rails.application.routes.draw do
             path_names: { new: 'signup' }
 
   resources :player,
-            only: [:new, :create],
+            only: [:new, :create, :show],
             path_names: { new: 'player_signup'}
 
   get 'login' => 'sessions#login'
   post 'login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   get 'player_login' => 'players#login'
+  get 'player_status' => 'pleyers#status'
   get 'play_game' => 'play_game#play_game'
   get 'count_down' => 'play_game#count_down'
   get 'blastoff' => 'play_game#blastoff'
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
   get 'crashed_liftoff' => 'play_game#crashed_liftoff'
   get 'biggest_loser' => 'play_game#biggest_loser'
   get 'loser' => 'play_game#loser'
+  get 'abduction' => 'play_game#abduction'
   get 'alien' => 'play_game#alien'
   get 'alien_attack' => 'play_game#alien_attack'
   get 'alien_fly' => 'play_game#alien_fly'
