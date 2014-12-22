@@ -1,22 +1,24 @@
-<p>
-  <strong>Name:</strong>
-  <%= @player.name %>
-</p>
+<div class='play-game-view'>
+  <p>
+    <strong>Name:</strong>
+    <%= @player.name %>
+  </p>
 
-<p>
-  <strong>Rubber chicken:</strong>
-  <%= @player.rubber_chicken %>
-</p>
+  <p>
+    <strong>Rubber chicken:</strong>
+    <%= @player.rubber_chicken %>
+  </p>
 
-<p>
-  <strong>Loser:</strong>
-  <%= @player.loser %>
-</p>
+  <p>
+    <strong>Loser:</strong>
+    <%= @player.loser %>
+  </p>
 
-<p>
-  <strong>Alien:</strong>
-  <%= @player.alien %>
-</p>
+  <p>
+    <strong>Alien:</strong>
+    <%= @player.alien %>
+  </p>
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Play Game', play_game_path %>
+  <%= link_to 'Edit', edit_player_path(@player) %> |
+  <%= link_to 'Play Game', play_game_path %>
+</div>

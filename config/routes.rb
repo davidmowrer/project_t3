@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   get 'player_login' => 'players#login'
+  post 'player_login' => 'players#create'
   get 'player_status' => 'pleyers#status'
   get 'play_game' => 'play_game#play_game'
   get 'count_down' => 'play_game#count_down'

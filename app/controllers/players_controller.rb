@@ -2,7 +2,6 @@ class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
 
   def login
-    @player = Player.new
   end
 
   def index
@@ -14,7 +13,6 @@ class PlayersController < ApplicationController
   end
 
   def player_status
-
   end
 
   def new
@@ -56,8 +54,6 @@ class PlayersController < ApplicationController
     end
   end
 
-  # DELETE /players/1
-  # DELETE /players/1.json
   def destroy
     @player.destroy
     respond_to do |format|
@@ -74,6 +70,6 @@ class PlayersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def player_params
-      params.require(:player).permit(:name, :rubber_chicken, :loser, :alien)
+      params.require(:player).permit(:name)
     end
 end

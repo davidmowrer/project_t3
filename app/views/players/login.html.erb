@@ -1,5 +1,10 @@
-<h2>Existing player</h2>
-
-<%= render 'form_existing' %>
-
-<%= link_to 'Back', play_game_path %>
+<div class='play-game-view'>
+  <h1>Existing Player Login</h1>
+  <%= form_tag player_login_path do %>
+   <p>
+     <%= label_tag :name %>
+     <%= text_field_tag :name %>
+   </p>
+  <%= submit_tag  'Player Login' %>
+ <% end %>
+</div>
