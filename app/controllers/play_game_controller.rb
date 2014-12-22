@@ -4,16 +4,18 @@ class PlayGameController < ApplicationController
     render :player_path
   end
 
-  def player_status
-    render :player_path
+  def update_status
+    render :edit_player_path
   end
 
   def player_update
     render :edit_player_path
   end
 
-
   def play_game
+    @earned_alien == 0
+    @earned_chicken == 0
+    @earned_loser == 0
   end
 
   def count_down
@@ -32,6 +34,7 @@ class PlayGameController < ApplicationController
   end
 
   def loser
+    @earned_loser == 1
   end
 
   def abduction
@@ -40,8 +43,8 @@ class PlayGameController < ApplicationController
   def orbit_earth
   end
 
-
   def earth_winner
+    @earned_alien == 1
   end
 
   def earth_chicken
@@ -51,6 +54,7 @@ class PlayGameController < ApplicationController
   end
 
   def rubber_chicken
+    @earned_chicken == 1
   end
 
   def moon

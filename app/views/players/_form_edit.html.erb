@@ -1,0 +1,27 @@
+<%= form_for(@player) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rubber_chicken %><br>
+    <%= f.text_field :rubber_chicken %>
+  </div>
+
+  <div class="field">
+    <%= f.label :loser %><br>
+    <%= f.text_field :loser %>
+  </div>
+
+  <div class="field">
+    <%= f.label :alien %><br>
+    <%= f.text_field :alien %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
